@@ -57,6 +57,7 @@ export default {
      background-color: white;
      height: 10%;
      max-height: 10%;
+     width: 100%;
   .form1{
       color: rgb(67, 48, 32); 
       text-align: center;

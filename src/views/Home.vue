@@ -124,17 +124,18 @@ export default {
 
 
 
-#dreamcar{
- margin-top: 4%; 
- min-width: 96%;  
- max-height: 10%;
- height: 10%; 
-}  /* .dream end */
-
+  #dreamcar{
+  margin-top: 2%; 
+  min-width: 100%;  
+  max-height: 10%;
+  height: 10%;
+  padding: 4%;
+  margin-left:0.9%; 
+  }  /* .dream end */
+ 
 }  /* home end */
 
  
-
 @media screen and (max-width:550px) {
 .home{
   video{
