@@ -13,8 +13,9 @@ export default {
 </script>
 
 <style lang="scss">
-body{  
-  background-image: url("./assets/images/cars-with-orangecar.png");
+body{
+  margin: 0;  
+  background-image: url("./assets/images/mercedes-benz-row.jpg");
   background-repeat: no-repeat;
   background-size:cover;
   font-family: 'Anton';

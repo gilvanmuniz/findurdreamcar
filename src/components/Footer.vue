@@ -51,20 +51,29 @@ export default {
     }
 }  /* conteudo end */
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 360px){
+    .conteudo{
+      h6{
+        font-size: 0.7em;
+        margin-left: 2%;
+      }
       .social-midia{        
-        padding: 2%;
+        padding: 1%;
         width:50%;
+        margin-top: 7%;
         img{
             width: 20%;
-            height:30%;
+            height:26%;
             margin-top: 7%;
         }
         #youtube{
             width: 24%;
             height:32%;
         }
-    }
+      }
+     }
+
+      
 }
 </style>>
 
