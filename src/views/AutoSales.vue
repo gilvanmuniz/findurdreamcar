@@ -25,7 +25,7 @@
     <h1 id="our">Our Premium Pre-owned automobiles</h1> 
     <h4>Page under construction</h4>   
    
-    <img id="seta" src="./../assets/images-sales/seta_DESCER-1.png" alt="">
+    <img id="seta" src="./../assets/images-sales/seta_DESCER-1.png" alt="seta">
     <img id="seta2" src="./../assets/images-sales/seta_DESCER-1.png" alt="">
     <vitrine id="vitri" />
     <Footer id="foot" />
