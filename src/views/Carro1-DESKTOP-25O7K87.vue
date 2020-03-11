@@ -1,5 +1,7 @@
 <template>
-<div class="container"> 
+<div class="container" 
+
+> <!-- tag container end -->
   
    <div class="wrap" :style = "{ marginLeft: ajustemargin + 'px', width: innerwidth + 'px' }"
 >
@@ -7,14 +9,15 @@
       v-for="(slide, i) in sliders" :key="i" 
       v-bind:sliders="slide"
       :style = "{ width: innerwidth / 6 + 'px'}"  
-      >          
-     </slide>     
+      >
+          
+     </slide>
+     {{ singlewidth }} {{ innerwidth }} {{ ajustemargin }}   
    </div><!--  wrap end --> 
     <div class="controller">
        <button v-on:click="nextFoto">Next</button>
        <button v-on:click="goToPrev">Go Back</button>
-    </div>
-     {{ singlewidth }} {{ innerwidth }} {{ ajustemargin }}    
+    </div>  
   </div><!--  container end --> 
 </template>
 
@@ -41,7 +44,9 @@ export default {
           estiloWrap: {
             singlewidth: this.singlewidth,
             ajustemargin: this.ajustemargin 
-         }     
+          }
+          
+          
     }
   },
   
@@ -56,39 +61,38 @@ export default {
   },
   methods: {
     nextFoto(){
-       this.ajustemargin -= (this.singlewidth / 2) + 4
+       this.ajustemargin -= (this.singlewidth / 2)
     },
     goToPrev(){
-      this.ajustemargin += (this.singlewidth / 2) + 4
+      this.ajustemargin += (this.singlewidth / 2)
     }
   },
   mounted () {
     this.singlewidth1 = this.$el.clientWidth/this.itemsPerSlide 
     this.singlewidth = this.singlewidth1
-    this.innerwidth = this.singlewidth * this.sliders.length / 2 
+    this.innerwidth = this.singlewidth * this.sliders.length / 2
   },
 
 }
 </script>
 <style lang="scss">
  .container{
-     
-   overflow: hidden;   
+   overflow: hidden;
    .wrap{
      position: relative;
      display: flex;
      overflow: hidden;
      margin-top: 7%;
      justify-content: start;
-     background-color: white;;
+     align-items:center;
      .sliders{       
        margin:0.2%;       
        .carousel{
          width:100%;
-         margin: 0%;
+         margin: 1%;
          img{
-           width: 545px;
-           border: solid 8px white ;                     
+           width: 570px;
+           border: solid 4px white ;           
          }
        }
      }     
@@ -101,7 +105,7 @@ export default {
      align-items: center;
      margin-left: 20%;
      button{
-     margin-left: 14%;
+     margin-left: 2%;
      margin-top: 35%;
      width: 50%;
      height: 5%;
