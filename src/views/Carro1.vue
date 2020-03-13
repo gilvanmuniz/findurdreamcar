@@ -1,10 +1,10 @@
 <template>
 <div class="container"> 
-  
+  <cabecalho></cabecalho>
    <div class="wrap" :style = "{ marginLeft: ajustemargin + 'px', width: innerwidth + 'px' }"
 >
      <slide class="sliders" 
-      v-for="(slide, i) in sliders" :key="i" 
+      v-for="(slide, i2) in sliders" :key="i2" 
       v-bind:sliders="slide"
       :style = "{ width: innerwidth / 6 + 'px'}"  
       >          
@@ -12,15 +12,15 @@
    </div><!--  wrap end --> 
     <div class="controller">
        <button v-on:click="nextFoto">Next</button>
-       <button v-on:click="goToPrev">Go Back</button>
-    </div>
-     {{ singlewidth }} {{ innerwidth }} {{ ajustemargin }}    
+       <button v-on:click="goToPrev">Go Back</button>       
+    </div>         
   </div><!--  container end --> 
 </template>
 
 <script>
 
 import Slide from './../components/Slide'
+import Cabecalho from './../components/Cabecalho'
 export default {
  
   data () {
@@ -52,7 +52,8 @@ export default {
     }
   },
   components: {
-    Slide
+    Slide,
+    Cabecalho
   },
   methods: {
     nextFoto(){
@@ -71,14 +72,13 @@ export default {
 }
 </script>
 <style lang="scss">
- .container{
-     
+ .container{     
    overflow: hidden;   
    .wrap{
      position: relative;
      display: flex;
      overflow: hidden;
-     margin-top: 7%;
+     margin-top: -1.5%;
      justify-content: start;
      background-color: white;;
      .sliders{       
@@ -96,19 +96,58 @@ export default {
    .controller{
      position: relative;     
      display: flex;
-     width: 50%;
-     margin-top: -15.5%;
+     width: 50%;     
      align-items: center;
-     margin-left: 20%;
+     margin-left: 22%;
      button{
      margin-left: 14%;
-     margin-top: 35%;
+     margin-top:0.5%;
      width: 50%;
      height: 5%;
    }
-}  
- 
-  
+ } /* controller end */
+   
 }/*  container end */ 
+
+@media screen and (max-width: 380px) {
+  .container{
+   background-color: white;     
+  margin-left: 0%;
+   margin-right: -1%;  
+   .wrap{
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     overflow: hidden;
+     padding: 1%;
+     margin-top: 7%;
+     margin-left: -7%;
+     justify-content: start;
+     background-color: white;
+     .sliders{       
+       margin:0%;       
+       .carousel{
+         width:100%;
+         margin-left: -3%;
+         img{
+           width: 350px;
+           border: solid 2.5px white;
+           padding:3%;
+           margin-left:1%;
+           border-right:solid 4px white ;                     
+         }
+       }
+     }     
+   }
+   .controller{          
+     display: hidden;     
+     button{
+     visibility:hidden; 
+    }
+ } /* controller end */
+   
+}/*  container end */ 
+
+}  /* media end */
    
 </style>

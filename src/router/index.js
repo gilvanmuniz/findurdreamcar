@@ -24,7 +24,12 @@ const routes = [
     path: '/carro1',
     name: 'Carro1',   
     component: () => import(/* webpackChunkName: "carro1" */ '../views/Carro1.vue')
-  }
+  },
+  // {
+  //   path: '/carro2',
+  //   name: 'Carro2',   
+  //   component: () => import(/* webpackChunkName: "carro2" */ '../views/Carro2.vue')
+  // }
 ]
 
 const router = new VueRouter({

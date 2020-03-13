@@ -9,7 +9,7 @@
       </div>
     <div class="card"  >
         
-         <router-link to="/"> <img src="./../assets/images-sales/mercedes.png" alt=""></router-link>
+         <router-link to="/carro2"> <img src="./../assets/images-sales/mercedes.png" alt=""></router-link>
          
           <div class="card-footer ">
               <h2>2010 Mercedes Benz</h2>

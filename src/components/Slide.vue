@@ -8,21 +8,7 @@
 
 <script>
 export default {
-  data() {
-    return {
-      teste: 'teste'
-    };
-  },
-  props: ["sliders"],
-  methods: {
-    mudaPosicao(){
-      this.teste = !'teste';
-    }
-  }
+  props: ["sliders"],  
 };
 </script>
 
-<style lang="scss" scoped>
-
-
-</style>
