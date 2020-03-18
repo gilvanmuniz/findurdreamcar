@@ -63,21 +63,25 @@ export default {
         }
     }   
 }/*  container end */ 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 416px) {
   .container1{
       justify-content:start;
+      align-items: center;
       #card1{
-            margin-left:9%;
+            margin-left:10%;
        }
        .card{
         width: 38%;
         height:auto;
-        margin-left:6%;        
-    .card-footer{
-        h2{
-            font-size:0.9em;            
-        }
-    }    
+        margin-left:3%;
+        img{
+            width:100%;
+        }        
+       .card-footer{
+            h2{
+                font-size:0.9em;            
+            }
+        } /* card-footer end */  
   }/*  card end */ 
 
   }/*  container1 end */ 

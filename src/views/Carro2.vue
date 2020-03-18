@@ -26,12 +26,12 @@ export default {
   data () {
     return {         
           sliders: [            
-               { src: require('./../assets/images-showcase/white-mercedes/mercedes.jpeg')},
-               { src: require('./../assets/images-showcase/white-mercedes/mercedes2.jpeg')},
-               { src: require('./../assets/images-showcase/white-mercedes/mercedes3.jpeg')},
-               { src: require('./../assets/images-showcase/white-mercedes/mercedes4.jpeg')},
-               { src: require('./../assets/images-showcase/white-mercedes/mercedes5.jpeg')},                       
-               { src: require('./../assets/images-showcase/white-mercedes/mercedes-dentro.jpeg')},                       
+               { src: require('./../assets/images-showcase/black-mercedes/mercedes.jpeg')},
+               { src: require('./../assets/images-showcase/black-mercedes/mercedes2.jpeg')},
+               { src: require('./../assets/images-showcase/black-mercedes/mercedes-dentro.jpeg')},
+               { src: require('./../assets/images-showcase/black-mercedes/mercedes-pc.jpeg')},
+               { src: require('./../assets/images-showcase/black-mercedes/mercedes-aberta.jpeg')},                       
+               { src: require('./../assets/images-showcase/black-mercedes/trazeira.jpeg')},                       
           ],                     
           innerwidth: 0,
           singlewidth: 0,
@@ -39,8 +39,8 @@ export default {
           currentIndex: 0,          
           ajustemargin: 0,          
           estiloWrap: {
-            singlewidth: this.singlewidth,
-            ajustemargin: this.ajustemargin 
+          singlewidth: this.singlewidth,
+          ajustemargin: this.ajustemargin 
          }     
     }
   },
@@ -78,7 +78,7 @@ export default {
      position: relative;
      display: flex;
      overflow: hidden;
-     margin-top: 0.5%;
+     margin-top: -1.5%;
      justify-content: start;
      background-color: white;;
      .sliders{       
@@ -103,7 +103,7 @@ export default {
      margin-left: 14%;
      margin-top:0.5%;
      width: 50%;
-     height: 5%;     
+     height: 5%;
    }
  } /* controller end */
    
@@ -112,7 +112,7 @@ export default {
 @media screen and (max-width: 416px) {
   .container{
    background-color: white;
-   width: 110%;      
+   width: 110%;     
    margin-left: 0%;
    margin-right: -1%;  
    .wrap{
@@ -122,7 +122,7 @@ export default {
      overflow: hidden;
      padding: 1%;
      margin-top: 6%;
-     margin-left: -7%;
+     margin-left: -8%;
      justify-content: start;
      background-color: white;
      .sliders{       
@@ -143,8 +143,7 @@ export default {
    .controller{          
      display: hidden;     
      button{
-     visibility:hidden;
-    
+     visibility:hidden; 
     }
  } /* controller end */
    

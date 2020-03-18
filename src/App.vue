@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    
+  <div id="app">    
     <router-view/>
   </div>
 </template>
@@ -24,8 +23,12 @@ body{
   font-size: 1.2em;
 }
 
-@media screen and (max-width: 550px) {
- 
-}
+@media screen and (max-width: 360px) {
+  body{
+    background-color: white;
+    background-image: null;
+    background-repeat: repeat;
+  }
+} /* media end */
 
 </style>

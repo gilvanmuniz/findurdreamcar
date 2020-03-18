@@ -12,30 +12,41 @@
                  specific you're looking for beyond make and model, make sure you let us know in 
                  the comments box at the bottom of the form. Once you submit the form, one of our 
                  expert team members will call you to go over your request -</p>
-      </div>
+                                 
+                 <h2>Be welcome to Find Ur Dream Car</h2>
+      </div> <!-- invite end -->
       <div class="form1">
           <h2>Find ur dream car:</h2>
-      <form action="">         
-            <b-form-group label-cols="4" label-cols-lg="2" label="Mark:" label-for="input-default">
-            <b-form-input id="input-default"></b-form-input>
+      <form action="enviaemail.php" method="post">         
+            <b-form-group label-cols="4" label-cols-lg="2" label="Make:" label-for="input-default">
+            <b-form-input name="mark" id="input-default"></b-form-input>
             </b-form-group>
             <b-form-group label-cols="4" label-cols-lg="2" label="Model:" label-for="input-default">
-            <b-form-input id="input-default"></b-form-input>
+            <b-form-input name="model" id="input-default"></b-form-input>
             </b-form-group>
             <b-form-group label-cols="4" label-cols-lg="2" label="Color:" label-for="input-default">
-            <b-form-input id="input-default"></b-form-input>
+            <b-form-input name="color" id="input-default"></b-form-input>
             </b-form-group>
             <b-form-group label-cols="4" label-cols-lg="2" label="Year:" label-for="input-default">
-            <b-form-input id="input-default"></b-form-input>
+            <b-form-input name="year" id="input-default"></b-form-input>
             </b-form-group>
             <b-form-group label-cols="5" label-cols-lg="2" label="Max price:" label-for="input-default">
-            <b-form-input id="input-default"></b-form-input>
+            <b-form-input name="maxprice" id="input-default"></b-form-input>
+            </b-form-group>
+            <b-form-group label-cols="5" label-cols-lg="2" label="Your Name:" label-for="input-default">
+            <b-form-input name="yourname" id="input-default"></b-form-input>
+            </b-form-group>
+            <b-form-group label-cols="5" label-cols-lg="2" label="Your cellphone:" label-for="input-default">
+            <b-form-input name="cellphone" id="input-default"></b-form-input>
+            </b-form-group>
+            <b-form-group label-cols="5" label-cols-lg="2" label="Your email:" label-for="input-default">
+            <b-form-input name="email" id="input-default"></b-form-input>
             </b-form-group>
             <b-form-group label-cols="4" label-cols-lg="2" label="Comments:" label-for="input-default">
-             <b-form-textarea  id="textarea-no-resize" placeholder="comments here"                
+             <b-form-textarea name="comments"  id="textarea-no-resize" placeholder="comments here"                
              rows="4" no-resize ></b-form-textarea>  <!-- textrea end -->              
              </b-form-group>
-            <b-button variant="outline-primary">Send</b-button>   
+            <b-button type="submit" variant="outline-primary">Send</b-button>   
             
       </form>
       </div>
@@ -45,7 +56,6 @@
 
 <script>
 export default {
-
 }
 </script>
 
@@ -53,6 +63,7 @@ export default {
  .container{
      display: flex;
      justify-content:space-evenly;
+     align-items: center;
      padding: 1%;
      background-color: white;
      height: 10%;
@@ -84,7 +95,8 @@ export default {
       padding: 3%;
       border-radius: 4%;
       margin-left: -1%;
-      p{
+      p{  
+          font-size: 1.2em;
           text-align: justify;
           font-family: Aldrich;
       }
@@ -96,7 +108,7 @@ export default {
           
  }
  
-  @media screen and(max-width: 550px){
+  @media screen and(max-width: 416px){
       h2{
           font-size: 1.3em;
       }

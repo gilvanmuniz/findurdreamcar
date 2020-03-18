@@ -21,7 +21,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
 .container{
   padding: 2%;
   display: flex;
@@ -31,6 +30,7 @@ export default {
   color: white;
   #our{
     font-family: Aldrich;
+    margin-top: 12%;
     text-shadow: 1.6px 1.6px #000000;
     border: solid 2px white;
     padding: 1.2% 1.2%;
@@ -41,8 +41,7 @@ export default {
   #seta{
     margin-top:4%;
     width: 3%;
-    height:22px;
-    
+    height:22px;    
   }
   #seta2{
     margin-top:0.4%;
@@ -61,15 +60,22 @@ export default {
 
 } /* container end */
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 416px) {
 .container{
- #our{    
+  padding:0;
+ #our{   
+    margin-top: 7%; 
     text-shadow: 1.2px 1.2px #000000;
     border: solid 2px white;
     padding: 1.2% 1.2%;  
     font-size:0.85em;      
   } /*  our end */ 
-
+  #seta{    
+    height:8px;    
+  }
+  #seta2{    
+    height:8px
+  }
    #foot{
     width: 110%;
     padding: 3%;

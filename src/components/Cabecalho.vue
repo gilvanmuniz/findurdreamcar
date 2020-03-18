@@ -54,7 +54,7 @@ export default {
     padding: 1%;
     width: 14%;
     margin-left:-65%;
-    margin-top: 2%;
+    margin-top: 4.4%;
     img{
       width:100%;
     }
@@ -99,6 +99,7 @@ export default {
       }
     } /* social-midia end */
      .menu{
+       margin-top:1%;
        display: flex;        
        margin-left: 10%;
        #salles{
@@ -121,7 +122,7 @@ export default {
   
 } /* container end */
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width:416px) {
 .container{
 
 .logo{
