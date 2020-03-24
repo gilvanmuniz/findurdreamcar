@@ -33,8 +33,7 @@ export default {
   components: {
     FindUrDreamCar,
     Footer
-  }
-  
+  }  
 }
 </script>
 <style lang="scss" scoped>
@@ -49,7 +48,6 @@ export default {
   min-width: 104%;
 	min-height: 100%;
 }
-
 .nav1{
   position: fixed;
   top: 0%;
@@ -99,8 +97,6 @@ export default {
 
 }/* nav class end */
 
-
-
 .findur{
   position: relative;
   margin-top:-10%;
@@ -122,8 +118,6 @@ export default {
   } 
 }  /* findur end */
 
-
-
   #dreamcar{
   margin-top: 2%; 
   min-width: 100%;  
@@ -136,7 +130,7 @@ export default {
 }  /* home end */
 
  
-@media screen and (max-width:550px) {
+@media screen and (max-width:440px) {
 .home{
   video{
   position: relative;
@@ -154,6 +148,57 @@ export default {
     margin-top: 0.6%;
     width: 18%;
     height:18%;
+  } 
+   nav{
+    max-width: 549px; 
+    margin-left:0.4%;
+    ul{
+    margin-top: 0.1%;
+  }
+  ul li{    
+    padding: 1px;       
+  }
+   ul li a{   
+    font-size: 11px;
+    margin-left: 0.1%;              
+  } 
+   
+  }
+   
+}
+.mouse{
+  position: relative;
+  margin-top:-10%;
+  margin-left:-23%;
+  img{
+    width:8%;    
+  }  
+}
+.dream{
+    width: 99%;
+ }
+} /* home end */
+
+} /* media end */
+
+@media screen and (min-width: 431px) and (max-width: 737px) {
+.home{
+  video{
+  position: relative;
+  top:-30%;
+  right: 0;  
+  max-width: 100%; 
+	
+}
+.nav1{   
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 0.2%;
+  padding-bottom: 0.3%;    
+  img{
+    margin-top: 0.9%;
+    width: 18%;
+    height:60%;
   } 
    nav{
     max-width: 549px; 

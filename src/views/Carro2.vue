@@ -11,8 +11,8 @@
      </slide>     
    </div><!--  wrap end --> 
     <div class="controller">
-       <button v-on:click="nextFoto">Next</button>
-       <button v-on:click="goToPrev">Go Back</button>       
+       <button v-on:click="goToPrev"> &lt;&lt; Go Back</button>
+       <button v-on:click="nextFoto">Next >></button>       
     </div>         
   </div><!--  container end --> 
 </template>
@@ -57,9 +57,15 @@ export default {
   },
   methods: {
     nextFoto(){
+      if(this.ajustemargin == -2296){
+         return
+       }
        this.ajustemargin -= (this.singlewidth / 2) + 4
     },
     goToPrev(){
+      if(this.ajustemargin == 0){
+         return
+       }
       this.ajustemargin += (this.singlewidth / 2) + 4
     }
   },
@@ -75,6 +81,7 @@ export default {
  .container{     
    overflow: hidden;   
    .wrap{
+     transition: margin 0.7s ease-out;
      position: relative;
      display: flex;
      overflow: hidden;
@@ -115,14 +122,14 @@ export default {
    width: 110%;     
    margin-left: 0%;
    margin-right: -1%;  
-   .wrap{
+   .wrap{     
      position: relative;
      display: flex;
      flex-direction: column;
      overflow: hidden;
      padding: 1%;
      margin-top: 6%;
-     margin-left: -8%;
+     margin-left: 4%;
      justify-content: start;
      background-color: white;
      .sliders{       
@@ -134,7 +141,7 @@ export default {
            width: 350px;
            border: solid 2.5px white;
            padding:3%;
-           margin-left:1%;
+           margin-left:4%;
            border-right:solid 4px white ;                     
          }
        }

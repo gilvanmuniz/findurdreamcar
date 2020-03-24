@@ -5,6 +5,9 @@
     <img id="seta" src="./../assets/images-sales/seta_DESCER-1.png" alt="seta">
     <img id="seta2" src="./../assets/images-sales/seta_DESCER-1.png" alt="">
     <vitrine id="vitri" />
+    <div class="marco">
+      <img src="./../assets/images/Marco-tratada.jpg" alt="">
+    </div>
     <Footer id="foot" />
   </div>
 </template>
@@ -22,7 +25,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container{
-  padding: 2%;
+  padding: 0%;  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,8 +55,20 @@ export default {
     margin-top: 11%;
     width:124%;
   }
+  .marco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #717276;
+    width: 124%;
+    height: auto;
+    img{
+      width: 45%;     
+    }
+  }
 
   #foot{
+    margin-top: -2%;
     width: 124%;
     margin-left: -2%;
   }
@@ -63,6 +78,7 @@ export default {
 @media screen and (max-width: 416px) {
 .container{
   padding:0;
+  padding-left:1%;
  #our{   
     margin-top: 7%; 
     text-shadow: 1.2px 1.2px #000000;
@@ -76,10 +92,78 @@ export default {
   #seta2{    
     height:8px
   }
+  #vitri{
+    margin-top: 14%;
+    // width:100%;
+  }
+  .marco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #717276;
+    padding-left: 0.5%;
+    width: 115%;
+    margin-right: 4%;
+    margin-left: 0%;
+    
+    img{
+      width: 90%;
+      margin-left: 5%;
+    }
+  }
    #foot{
-    width: 110%;
+    width: 116%;
     padding: 3%;
     margin-left: 0%;     
+  }
+  }/*  containe end */  
+} /* media end  */ 
+
+@media screen and (min-width: 431px) and (max-width: 737px) {
+.container{
+  padding:0;
+  padding-left:0%;
+ #our{   
+    margin-top: 7%; 
+    text-shadow: 1.2px 1.2px #000000;
+    border: solid 2px white;
+    padding: 1.2% 1.2%;  
+    font-size:0.99em; 
+    margin-left: -14%;     
+  } /*  our end */ 
+  #seta{    
+    height:18px;
+    width: 25px;
+    margin-left: -14%;      
+  }
+  #seta2{    
+    height:18px;
+    width: 25px;
+    margin-left: -14%;  
+  }
+  #vitri{
+    margin-top: 14%;
+    // width:100%;
+  }
+  .marco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #717276;
+    padding-left: 0.5%;
+    width: 134%;
+    margin-right: 4%;
+    margin-left: 1%;
+    
+    img{
+      width: 90%;
+      margin-left: -3%;
+    }
+  }
+   #foot{
+    width: 134%;
+    padding: 3%;
+    margin-left: -4%;     
   }
   }/*  containe end */  
 } /* media end  */ 

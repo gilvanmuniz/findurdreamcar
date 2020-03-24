@@ -12,9 +12,9 @@
               <button id="salles" ><li><router-link to="/autosales">Auto Sales</router-link></li></button>
             </div>
             <div class="social-midia">
-              <a href="#"><img id="logo" src="./../assets/images-sales/facebbook.white-SMALL-1.png" alt="facebook"></a>
-              <a href="#"><img id="logo" src="./../assets/images-sales/instagram-white-SMALL-1.png" alt="instagram"></a>
-              <a href="#"><img id="logo" src="./../assets/images-sales/youtube-white-SMALL-1.png" alt="youtube"></a>
+              <a href="https://www.facebook.com/Findurdreamcar-102470148033793/?modal=admin_todo_tour"><img id="logo" src="./../assets/images-sales/facebbook.white-SMALL-1.png" alt="facebook"></a>
+              <a href="https://www.instagram.com/findurdreamcar/"><img id="logo" src="./../assets/images-sales/instagram-white-SMALL-1.png" alt="instagram"></a>
+              <a href="https://www.youtube.com/channel/UCcw5-sT88ThYWTXqEqFUQ8w"><img id="logo" src="./../assets/images-sales/youtube-white-SMALL-1.png" alt="youtube"></a>
             </div><!-- social-midia end -->
           </div><!--  nav-menu end --> 
       
@@ -146,7 +146,52 @@ export default {
     .nav-menu{     
       .social-midia{      
         float: right;
-        margin-left: 45%;   
+        margin-left: 33%;   
+       a{
+        margin-left: 8%;
+       }/*  img end */ 
+    } /* social-midia end */
+     .menu{        
+       margin-left: 6%;
+       li{
+         margin-top: -3%;
+       }
+       button{
+         height: 80%;         
+       }
+     }
+          
+    }    
+  } /* topo end */ 
+ 
+  }/*  containe end */  
+} /* media end  */ 
+
+@media screen and (min-width:416px) and (max-width:737px) {
+.container{
+
+.logo{
+    background-color: black;
+    padding: 1%;
+    width:20%;
+    margin-left:-45%;
+    margin-top: 9%;
+    img{
+      width:100%;
+    }
+  }/* logo end */  
+.topo{   
+    .quadriculado{
+     max-height: 1%;
+     display: flex;     
+     #faixa-topo{
+       height: 10px;
+     }
+    } /* quadriculado end  */ 
+    .nav-menu{     
+      .social-midia{      
+        float: right;
+        margin-left: 33%;   
        a{
         margin-left: 8%;
        }/*  img end */ 

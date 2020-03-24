@@ -7,13 +7,14 @@
       v-for="(slide, i2) in sliders" :key="i2" 
       v-bind:sliders="slide"
       :style = "{ width: innerwidth / 6 + 'px'}"  
-      >          
+      :class="destacar" >          
      </slide>     
    </div><!--  wrap end --> 
     <div class="controller">
-       <button v-on:click="nextFoto">Next</button>
-       <button v-on:click="goToPrev">Go Back</button>       
-    </div>         
+       <button v-on:click="goToPrev"> &lt;&lt; Go Back</button>
+       <button v-on:click="nextFoto">Next >></button>       
+       <!-- <button v-on:click="darDestque">teste >></button>        -->
+    </div>          
   </div><!--  container end --> 
 </template>
 
@@ -37,7 +38,8 @@ export default {
           singlewidth: 0,
           singlewidth1: 0,
           currentIndex: 0,          
-          ajustemargin: 0,          
+          ajustemargin: 0, 
+          destacar: !'destaque',       
           estiloWrap: {
             singlewidth: this.singlewidth,
             ajustemargin: this.ajustemargin 
@@ -57,15 +59,27 @@ export default {
   },
   methods: {
     nextFoto(){
+      //  console.log(this.ajustemargin)
+      //  console.log(this.singlewidth)
+       if(this.ajustemargin == -2296){
+         return
+       }
        this.ajustemargin -= (this.singlewidth / 2) + 4
     },
     goToPrev(){
+      // console.log(this.ajustemargin)
+      if(this.ajustemargin == 0){
+         return
+       }
       this.ajustemargin += (this.singlewidth / 2) + 4
+    },
+    darDestque(){
+      this.destacar = 'destaque'
     }
   },
   mounted () {
-    this.singlewidth1 = this.$el.clientWidth/this.itemsPerSlide 
-    this.singlewidth = this.singlewidth1
+    this.singlewidth = this.$el.clientWidth/this.itemsPerSlide 
+    //this.singlewidth = this.singlewidth1
     this.innerwidth = this.singlewidth * this.sliders.length / 2 
   },
 
@@ -75,14 +89,21 @@ export default {
  .container{     
    overflow: hidden;   
    .wrap{
+     transition: margin 0.7s ease-out;
      position: relative;
      display: flex;
      overflow: hidden;
      margin-top: 0.5%;
      justify-content: start;
-     background-color: white;;
+     background-color: white;
+     .destaque{        
+        transform: scale(1.8);
+        text-decoration: none;
+        box-shadow: 0 7px 10px rgba(255,255,255,0.9);      
+       }  
      .sliders{       
-       margin:0.2%;       
+       margin:0.2%;
+          
        .carousel{
          width:100%;
          margin: 0%;
@@ -122,7 +143,7 @@ export default {
      overflow: hidden;
      padding: 1%;
      margin-top: 6%;
-     margin-left: -7%;
+     margin-left: 4%;
      justify-content: start;
      background-color: white;
      .sliders{       
@@ -134,7 +155,7 @@ export default {
            width: 350px;
            border: solid 2.5px white;
            padding:3%;
-           margin-left:1%;
+           margin-left:4%;
            border-right:solid 4px white ;                     
          }
        }

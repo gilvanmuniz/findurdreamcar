@@ -6,7 +6,7 @@
           <br>
           <p>We can access auto auctions that aren't open to the public, and we also have access 
             to dealers all over the country. We will track down exactly what you're looking for,
-             we’ll inspect it, and then can arrange for shipping to your door.</p>
+            we’ll inspect it, and then can arrange for shipping to your door.</p>
              <br>
              <p>Just fill out our easy Vehicle Finder form on our website. If there's something 
                  specific you're looking for beyond make and model, make sure you let us know in 
@@ -111,6 +111,10 @@ export default {
   @media screen and(max-width: 416px){
       h2{
           font-size: 1.3em;
+          margin-left: 4%;
+      }
+      #findIt{
+          margin-left: 14%;
       }
       [b-form-group]{
           font-size: 3em;
@@ -119,6 +123,12 @@ export default {
           flex-direction: column;
           .invite{
               max-width: 100%;
+              p{  
+                font-size: 1.1em;
+                text-align:center;
+                font-family: Aldrich;
+                margin-top: -2%;
+             }
           }
           .form1{
               width: 100%;
@@ -126,6 +136,37 @@ export default {
           }
       }
   } 
-
+  @media screen and(min-width: 416px) and (max-width: 746px) {
+      h2{
+          font-size: 1.3em;
+          margin-left: 24%;
+      }
+      h3{
+           margin-left: 24%;
+      }
+      #findIt{
+          margin-left: 34%;
+      }
+      [b-form-group]{
+          font-size: 3em;
+      }
+      .container{
+          flex-direction: column;
+          .invite{
+              max-width: 100%;
+              p{  
+                font-size: 1.1em;
+                text-align:center;
+                font-family: Aldrich;
+                margin-top: -2%;
+             }
+          }
+          .form1{
+              width: 100%;
+              margin-top: 2%;
+              margin-left: -7%;
+          }
+      }
+  } 
 </style>>
 
